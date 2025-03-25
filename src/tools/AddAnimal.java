@@ -31,56 +31,56 @@ public class AddAnimal {
 
 
         System.out.println("Введите имя: ");
-        String name = scanner.next();
+        String name = scanner.next().trim();
         while (!aName.isAcceptableName(name)) {
             System.out.println(String.format("%s - недопустимое имя, попробуйте снова", name));
-            name = scanner.next();
+            name = scanner.next().trim();
         }
 
 
         System.out.println("Введите возраст: ");
-        String ageStr = scanner.next();
+        String ageStr = scanner.next().trim();
         while (!ageStr.matches("\\d+")) {
             System.out.println(String.format("%s недопустимое число, либо же %s не является числом, попробуйте снова", ageStr, ageStr));
-            ageStr = scanner.next();
+            ageStr = scanner.next().trim();
         }
         int age = Integer.parseInt(ageStr);
         while (!aNum.isAcceptableNumbers(age)) {
             System.out.println(String.format("%s недопустимое число, либо же %s не является числом, попробуйте снова", age, age));
-            ageStr = scanner.next();
+            ageStr = scanner.next().trim();
             age = Integer.parseInt(ageStr);
         }
         while (age==0||age>=100) {
             System.out.println(String.format("%s недопустимое число, либо же %s не является числом, попробуйте снова", age, age));
-            ageStr = scanner.next();
+            ageStr = scanner.next().trim();
             age = Integer.parseInt(ageStr);
         }
 
 
         System.out.println("Введите вес: ");
-        String weightString = scanner.next();
+        String weightString = scanner.next().trim();
         while (!weightString.matches("\\d+")) {
             System.out.println(String.format("%s недопустимое число, либо же %s не является числом, попробуйте снова", weightString, weightString));
-            weightString = scanner.next();
+            weightString = scanner.next().trim();
         }
         int weight = Integer.parseInt(weightString);
         while (!aNum.isAcceptableNumbers(weight)) {
             System.out.println(String.format("%s недопустимое число, либо же %s не является числом, попробуйте снова", weight, weight));
-            weightString = scanner.next();
+            weightString = scanner.next().trim();
             weight = Integer.parseInt(weightString);
         }
         while (weight==0||weight>=100) {
             System.out.println(String.format("%s недопустимое число, либо же %s не является числом, попробуйте снова", weight, weight));
-            weightString = scanner.next();
+            weightString = scanner.next().trim();
             weight = Integer.parseInt(weightString);
         }
 
 
         System.out.println("Введите цвет: ");
-        String color = scanner.next();
+        String color = scanner.next().trim();
         while (!aName.isAcceptableName(color)) {
             System.out.println(String.format("%s недопустимый цвет, попробуйте снова", color));
-            color = scanner.next();
+            color = scanner.next().trim();
         }
 
 
